@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
     <title>GameGo</title>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
@@ -22,7 +24,7 @@
 
     <main class="contenedor">
         <section id="productos">
-            <h2 class="tituloSeccion"><strong>Productos Destacados</strong></h2>
+            <h2><strong>Productos Destacados</strong></h2>
 
             <div class="productos">
                 <article class="producto">
@@ -94,24 +96,68 @@
             </div>
         </section>
 
-        <section>
-            <h2>Categorías</h2>
-            <ul>
-                <li>Juegos</li>
-            </ul>
-        </section>
-
-        <section id="contacto">
-            <h2>Contacto </h2>
-            <h3>Direccion: Av. Inventada 232</h3>
-            <h3>Teléfono: +56 9 3934 9449</h3>
-            <h3>Correo: GameGo@gmail.com </h3>
+             <h2>Envianos tu comentario o  sugerencia</h2>
+            <form id="formularioContacto" class="formulario-contacto">
+                <div class="campo">
+                    <label for="nombre">
+                        Nombre
+                    </label>
+                    <input
+                        type="text"
+                        id="nombre"
+                        placeholder="Ej: Carolina">
+                    <small
+                        id="errorNombre"
+                        class="error">
+                    </small>
+                </div>
+                <div class="campo">
+                    <label for="correo">
+                        Correo
+                    </label>
+                    <input
+                        type="text"
+                        id="correo"
+                        placeholder="Ej: correo@gmail.com">
+                    <small
+                        id="errorCorreo"
+                        class="error">
+                    </small>
+                </div>
+                <div class="campo">
+                    <label for="comentario">
+                        Comentario
+                    </label>
+                    <textarea
+                        id="comentario"
+                        rows="5"
+                        placeholder="Escribe tu mensaje"></textarea>
+                    <small
+                        id="errorComentario"
+                        class="error">
+                    </small>
+                </div>
+                <button type="submit">
+                    Enviar mensaje
+                </button>
+                
+                <div id="mensajeFinal"></div>
+            </form>
+            <section id="contacto">
+            <h2>Contacto</h2>
+            <div class="contacto-info">
+                <h3>Dirección: Av. Inventada 232</h3>
+                <h3>Teléfono: +56 9 3934 9449</h3>
+                <h3>Correo: GameGo@gmail.com</h3>
+            </div>
         </section>
     </main>
 
     <footer class="footer">
         <p>@2026 GameGo</p>
     </footer>
+
+    <script src="js/validaciones.js"></script>
 </body>
 
 </html>
