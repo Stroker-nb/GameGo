@@ -11,7 +11,7 @@ body {
 }
 
 .cabecera {
-    background-color: 1a1d29;
+    background-color: #c0392b ;
     color: white;
     padding: 25px;
     text-align: center;
@@ -27,7 +27,7 @@ body {
     color: #c0392b;
     text-align: none;
     margin: 15px;
-    color: #4b5969;
+    color: #fcfcfc;
     text-decoration: none;
 }
 
@@ -87,6 +87,15 @@ body {
     border-radius: 6px;
 }
 
+.formulario-logIn {
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: #1a1d29;
+    border: 1px solid #3d3737;
+    padding: 30px;
+    border-radius: 6px;
+}
+
 .campo {
     margin-bottom: 20px;
 }
@@ -118,7 +127,21 @@ body {
     border-radius: 3px;
 }
 
+.formulario-logIn button {
+    background-color: #8b1e1e;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+
 .formulario-contacto button:hover {
+    background-color: #a52a2a;
+}
+
+.formulario-logIn button:hover {
     background-color: #a52a2a;
 }
 

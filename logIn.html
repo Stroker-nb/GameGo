@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GameGo</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body> 
+
+    <header class="cabecera">
+        <h1>GameGo</h1>
+        <p>Juegos, Juegos y más Juegos </p>
+    </header>
+
+    <section id="logIn">
+            <h2 style="text-align: center">Iniciar sesión</h2>
+            <form id="formularioLogIn" class="formulario-logIn">
+
+                <div class="campo">
+                    <label for="correo">
+                        Correo
+                    </label>
+                    <input
+                        type="text"
+                        id="correo"
+                        placeholder="Ej: correo@gmail.com">
+                    <small
+                        id="errorCorreo"
+                        class="error">
+                    </small>
+                </div>
+
+                <div class="campo">
+                    <label for="contraseña">
+                        Contraseña
+                    </label>
+                    <input
+                        type="password"
+                        id="contraseña"
+                        placeholder="Ingrese su contraseña">
+                    <small
+                        id="errorContraseña"
+                        class="error">
+                    </small>
+                </div>
+
+                <button type="submit">
+                    Iniciar sesión
+                </button>
+                    
+                <div id="mensajeFinal"></div>
+            </form>
+        </section>
+        <script src="js/validacionesLogIn.js"></script>
+
+        
+    <footer class="footer">
+        <p>@2026 GameGo</p>
+    </footer>
+</body>
+
+
+
+</html>
