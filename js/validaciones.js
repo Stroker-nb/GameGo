@@ -103,7 +103,7 @@ formulario.addEventListener(
         // Resultado final
         if (formularioValido) {
             mensajeFinal.textContent =
-                "¡Bienvenido!";
+                "¡Mensaje enviado correctamente! Te contactaremos pronto.";
             mensajeFinal.className = "exito";
             formulario.reset();
         } else {

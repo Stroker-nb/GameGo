@@ -78,7 +78,7 @@ formulario.addEventListener(
 
         if (formularioValido) {
             mensajeFinal.textContent =
-                "¡Mensaje enviado correctamente! Te contactaremos pronto.";
+                "¡Bienvenido!";
             mensajeFinal.className = "exito";
             formulario.reset();
                 setTimeout(() => {
