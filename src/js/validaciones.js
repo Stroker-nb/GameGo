@@ -74,11 +74,12 @@ formulario.addEventListener(
             formularioValido = false;
         } else {
             // REGLA 5 — Dominios de correo permitidos
-            const dominioPermitido =
+            const dominioPermitido1 =
                 correo.endsWith("@gmail.com");
+             const dominioPermitido2 =
                 correo.endsWith("@hotmail.com");
 
-            if (!dominioPermitido) {
+            if (!dominioPermitido1 , !dominioPermitido2) {
                 errorCorreo.textContent =
                     "Utiliza un correo @hotmail.com o @gmail.com.";
                 inputCorreo.classList.add("input-error");
