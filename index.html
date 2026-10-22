@@ -1,16 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>GameGo</title>
-    <link rel="stylesheet" href="src/assets/css/estilos.css">
+    <link rel="stylesheet" href="src/css/estilos.css" />
 </head>
 
 <body>
     <header class="cabecera">
         <h1>GameGo</h1>
-        <p>Juegos, Juegos y más Juegos </p>
+        <p>Juegos, Juegos y más Juegos</p>
+        <div id="contenedor-auth" style="position: absolute; top: 20px; right: 20px"></div>
     </header>
 
     <nav class="menu">
@@ -26,11 +27,11 @@
 
             <div class="productos">
                 <article class="producto">
-                     <h3>Bioshock</h3>
+                    <h3>Bioshock</h3>
                     <div class="icono">🎮</div>
-                    <img src="imagenes/bioshock.jpg" alt="Bioshock" width="200">
-                    
-                    <a class= "linkTrailer" href="https://www.youtube.com/watch?v=CoYorK3E4aM" target="_blank">Ver Trailer</a>
+                    <img src="src/assests/imagenes/bioshock.jpg" alt="Bioshock" width="200" />
+
+                    <a class="linkTrailer" href="https://www.youtube.com/watch?v=CoYorK3E4aM" target="_blank">Ver Trailer</a>
                     <p class="precio"><strong>Precio: $12.000</strong></p>
                     <button class="button">Comprar</button>
                 </article>
@@ -38,18 +39,18 @@
                 <article class="producto">
                     <h3>Rayman 3</h3>
                     <div class="icono">🎮</div>
-                    <img src="imagenes/rayman3.png" alt="Rayman 3" width="200">
+                    <img src="src/assests/imagenes/rayman3.png" alt="Rayman 3" width="200" />
 
-                    <a class= "linkTrailer" href="https://www.youtube.com/watch?v=2KNXCYYuHmc" target="_blank">Ver Trailer</a>
+                    <a class="linkTrailer" href="https://www.youtube.com/watch?v=2KNXCYYuHmc" target="_blank">Ver Trailer</a>
                     <p class="precio"><strong>Precio: $15.000</strong></p>
                     <button class="button">Comprar</button>
                 </article>
 
                 <article class="producto">
-                     <h3>Devil May Cry 3</h3>
+                    <h3>Devil May Cry 3</h3>
                     <div class="icono">🎮</div>
-                    <img src="imagenes/dmc3.jpg" alt="Devil May Cry 3" width="200">
-                    <a class= "linkTrailer" href="https://www.youtube.com/watch?v=KmeMu8qb_t4" target="_blank">Ver Trailer</a>
+                    <img src="src/assests/imagenes/dmc3.jpg" alt="Devil May Cry 3" width="200" />
+                    <a class="linkTrailer" href="https://www.youtube.com/watch?v=KmeMu8qb_t4" target="_blank">Ver Trailer</a>
                     <p class="precio"><strong>Precio: $20.000</strong></p>
                     <button class="button">Comprar</button>
                 </article>
@@ -59,13 +60,12 @@
         <h2 class="tituloSeccion"><strong> Otros productos </strong></h2>
 
         <section id="productos">
-
             <div class="productos">
                 <article class="producto">
                     <div class="icono">🎮</div>
                     <h3>Sonic Adventure 2</h3>
-                    <img src="imagenes\SonicAdventure2.png" alt="Sonic Adventure 2" width="100%">
-                    <a class= "linkTrailer" href="https://www.youtube.com/watch?v=xmbnZa9H6go" target="_blank">Ver Trailer</a>
+                    <img src="src/assests/imagenes/SonicAdventure2.png" alt="Sonic Adventure 2" width="100%" />
+                    <a class="linkTrailer" href="https://www.youtube.com/watch?v=xmbnZa9H6go" target="_blank">Ver Trailer</a>
                     <p>Sonic Adventure 2</p>
                     <p class="precio"><strong>Precio: $12.000</strong></p>
                     <button class="button">Comprar</button>
@@ -74,8 +74,8 @@
                 <article class="producto">
                     <div class="icono">🎮</div>
                     <h3>God of War</h3>
-                    <img src="imagenes/Portada_God_of_War.webp" alt="God of War" width="100%">
-                    <a class= "linkTrailer" href="https://www.youtube.com/watch?v=jZkX3LJDeYQ" target="_blank">Ver Trailer</a>
+                    <img src="src/assests/imagenes/Portada_God_of_War.webp" alt="God of War" width="100%" />
+                    <a class="linkTrailer" href="https://www.youtube.com/watch?v=jZkX3LJDeYQ" target="_blank">Ver Trailer</a>
                     <p>God of War</p>
                     <p class="precio"><strong>Precio: $30.000</strong></p>
                     <button class="button">Comprar</button>
@@ -84,8 +84,8 @@
                 <article class="producto">
                     <div class="icono">🎮</div>
                     <h3>Resident Evil 2</h3>
-                    <img src="imagenes/resident evil 2.png" alt="Resident Evil 2" width="100%">
-                    <a class= "linkTrailer" href="https://www.youtube.com/watch?v=kUjLG8ZxuHQ" target="_blank">Ver Trailer</a>
+                    <img src="src/assests/imagenes/resident evil 2.png" alt="Resident Evil 2" width="100%" />
+                    <a class="linkTrailer" href="https://www.youtube.com/watch?v=kUjLG8ZxuHQ" target="_blank">Ver Trailer</a>
                     <p>Resident Evil 2</p>
                     <p class="precio"><strong>Precio: $14.000</strong></p>
                     <button class="button">Comprar</button>
@@ -94,8 +94,9 @@
                 <article class="producto">
                     <div class="icono">🎮</div>
                     <h3>Tony Hawk's Pro Skater</h3>
-                    <img src="imagenes/tony hawks pro skater.jpg" alt="Tony Hawk's Pro Skater" width="100%">
-                    <a class= "linkTrailer" href="https://www.youtube.com/watch?v=w3okqIHJaxA" target="_blank">Ver Trailer</a>
+                    <img src="src/assests/imagenes/tony hawks pro skater.jpg" alt="Tony Hawk's Pro Skater"
+                        width="100%" />
+                    <a class="linkTrailer" href="https://www.youtube.com/watch?v=w3okqIHJaxA" target="_blank">Ver Trailer</a>
                     <p>Tony Hawk's Pro Skater</p>
                     <p class="precio"><strong>Precio: $21.000</strong></p>
                     <button class="button">Comprar</button>
@@ -104,8 +105,9 @@
                 <article class="producto">
                     <div class="icono">🎮</div>
                     <h3>Mario & Luigi Superstar Saga</h3>
-                    <img src="imagenes/mario luigi superstar saga.jpg" alt="Mario & Luigi Superstar Saga" width="100%">
-                    <a class= "linkTrailer" href="https://www.youtube.com/watch?v=d-jkNir4-wg" target="_blank">Ver Trailer</a>
+                    <img src="src/assests/imagenes/mario luigi superstar saga.jpg" alt="Mario & Luigi Superstar Saga"
+                        width="100%" />
+                    <a class="linkTrailer" href="https://www.youtube.com/watch?v=d-jkNir4-wg" target="_blank">Ver Trailer</a>
                     <p>Mario & Luigi Superstar Saga</p>
                     <p class="precio"><strong>Precio: $17.000</strong></p>
                     <button class="button">Comprar</button>
@@ -114,8 +116,8 @@
                 <article class="producto">
                     <div class="icono">🎮</div>
                     <h3>Donkey Kong Country</h3>
-                    <img src="imagenes/donkey kong country.jpg" alt="Donkey Kong Country" width="100%">
-                    <a class= "linkTrailer" href="https://www.youtube.com/watch?v=g8PJ7oiskR0" target="_blank">Ver Trailer</a>
+                    <img src="src/assests/imagenes/donkey kong country.jpg" alt="Donkey Kong Country" width="100%" />
+                    <a class="linkTrailer" href="https://www.youtube.com/watch?v=g8PJ7oiskR0" target="_blank">Ver Trailer</a>
                     <p>Donkey Kong Country</p>
                     <p class="precio"><strong>Precio: $19.000</strong></p>
                     <button class="button">Comprar</button>
@@ -123,72 +125,42 @@
             </div>
         </section>
 
-
-         <section id="sugerencias">
-            <h2>Envianos tu comentario o  sugerencia</h2>
+        <section id="sugerencias">
+            <h2>Envianos tu comentario o sugerencia</h2>
             <form id="formularioContacto" class="formulario-contacto">
                 <div class="campo">
-                    <label for="nombre">
-                        Nombre
-                    </label>
-                    <input
-                        type="text"
-                        id="nombre"
-                        placeholder="Ej: Carolina">
-                    <small
-                        id="errorNombre"
-                        class="error">
-                    </small>
+                    <label for="nombre"> Nombre </label>
+                    <input type="text" id="nombre" placeholder="Ej: Carolina" />
+                    <small id="errorNombre" class="error"> </small>
                 </div>
                 <div class="campo">
-                    <label for="correo">
-                        Correo
-                    </label>
-                    <input
-                        type="text"
-                        id="correo"
-                        placeholder="Ej: correo@gmail.com">
-                    <small
-                        id="errorCorreo"
-                        class="error">
-                    </small>
+                    <label for="correo"> Correo </label>
+                    <input type="text" id="correo" placeholder="Ej: correo@gmail.com" />
+                    <small id="errorCorreo" class="error"> </small>
                 </div>
-                 <div class="campo">
-                    <label for="comentario">
-                        Comentario
-                    </label>
-                    <textarea
-                        id="comentario"
-                        rows="5"
-                        placeholder="Escribe tu mensaje"></textarea>
-                    <small
-                        id="errorComentario"
-                        class="error">
-                    </small>
+                <div class="campo">
+                    <label for="comentario"> Comentario </label>
+                    <textarea id="comentario" rows="5" placeholder="Escribe tu mensaje"></textarea>
+                    <small id="errorComentario" class="error"> </small>
                 </div>
-                <button type="submit">
-                    Enviar mensaje
-                </button>
-                
-                    
+                <button type="submit">Enviar mensaje</button>
+
                 <div id="mensajeFinal"></div>
             </form>
-    
         </section>
-        
 
         <section id="contacto">
-            <h2>Contacto </h2>
+            <h2>Contacto</h2>
             <h3>Direccion: Av. Inventada 232</h3>
             <h3>Teléfono: +56 9 3934 9449</h3>
-            <h3>Correo: GameGo@gmail.com </h3>
+            <h3>Correo: GameGo@gmail.com</h3>
         </section>
     </main>
 
     <footer class="footer">
         <p>@2026 GameGo</p>
     </footer>
-    <script src="js/validaciones.js"></script>
+    <script src="src/js/validaciones.js"></script>
 </body>
 
 </html>

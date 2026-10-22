@@ -1,3 +1,36 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const contenedorAuth = document.getElementById('contenedor-auth');
+
+    // Función que evalúa la sesión y pinta el botón correcto
+    function actualizarBotonSesion() {
+        const sesionIniciada = localStorage.getItem('sesionIniciada') === 'true';
+
+        if (sesionIniciada) {
+            // Usuario logueado: Mostrar "Cerrar sesión"
+            contenedorAuth.innerHTML = '<button id="btn-logout" class="btn-header">Cerrar sesión</button>';
+            
+            // Evento para cerrar sesión
+            document.getElementById('btn-logout').addEventListener('click', () => {
+                localStorage.removeItem('sesionIniciada'); // Borra la persistencia
+                actualizarBotonSesion(); // Vuelve a evaluar y cambia el botón al instante
+            });
+        } else {
+            // Usuario visitante: Mostrar "Iniciar sesión"
+            contenedorAuth.innerHTML = '<button id="btn-login" class="btn-header">Iniciar sesión</button>';
+            
+            // Evento para ir al login
+            document.getElementById('btn-login').addEventListener('click', () => {
+                window.location.href = 'logIn.html';
+            });
+        }
+    }
+
+    // Inicializar el estado del botón al cargar la página
+    if (contenedorAuth) {
+        actualizarBotonSesion();
+    }
+});
+
 const formulario =
     document.getElementById("formularioContacto");
 

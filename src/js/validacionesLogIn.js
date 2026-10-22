@@ -67,7 +67,7 @@ formulario.addEventListener(
             const dominioPermitido2 = 
                 correo.endsWith("@hotmail.com");
             
-            if (!dominioPermitido1,!dominioPermitido2) {
+            if (!dominioPermitido1 && !dominioPermitido2) {
                 errorCorreo.textContent =
                     "Utiliza un correo @hotmail.com o @gmail.com.";
                 inputCorreo.classList.add("input-error");
@@ -82,9 +82,10 @@ formulario.addEventListener(
                 "¡Bienvenido!";
             mensajeFinal.className = "exito";
             formulario.reset();
-                setTimeout(() => {
-        window.location.href = "index.html";
-    }, 2000);
+            localStorage.setItem('sesionIniciada', 'true');
+            setTimeout(() => {
+                window.location.href = "index.html";
+            }, 2000);
         } else {
             mensajeFinal.textContent =
                 "Revisa los campos marcados en rojo antes de enviar.";
