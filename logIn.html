@@ -1,65 +1,52 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="es" data-bs-theme="dark">
 
 <head>
-    <meta charset="UTF-8">
-    <title>GameGo</title>
-    <link rel="stylesheet" href="src/css/estilos.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GameGo - Iniciar sesión</title>
+    <script type="module" src="src/js/main.js"></script>
 </head>
-<body> 
 
-    <header class="cabecera">
-        <h1>GameGo</h1>
-        <p>Juegos, Juegos y más Juegos </p>
+<body class="d-flex flex-column min-vh-100">
+    <header class="cabecera text-center">
+        <div class="container">
+            <h1>GameGo</h1>
+            <p class="mb-0">Juegos, Juegos y más Juegos</p>
+        </div>
     </header>
 
-    <section id="logIn">
-            <h2 style="text-align: center">Iniciar sesión</h2>
-            <form id="formularioLogIn" class="formulario-logIn">
+    <main class="container py-5 flex-grow-1">
+        <section id="logIn" class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-5">
+                <h2 class="tituloSeccion">Iniciar sesión</h2>
+                <form id="formularioLogIn" class="card card-body p-4" novalidate>
+                    <div class="mb-3">
+                        <label for="correo" class="form-label">Correo</label>
+                        <input type="text" id="correo" class="form-control" placeholder="Ej: correo@gmail.com" />
+                        <small id="errorCorreo" class="invalid-feedback"></small>
+                    </div>
 
-                <div class="campo">
-                    <label for="correo">
-                        Correo
-                    </label>
-                    <input
-                        type="text"
-                        id="correo"
-                        placeholder="Ej: correo@gmail.com">
-                    <small
-                        id="errorCorreo"
-                        class="error">
-                    </small>
-                </div>
+                    <div class="mb-3">
+                        <label for="contraseña" class="form-label">Contraseña</label>
+                        <input type="password" id="contraseña" class="form-control"
+                            placeholder="Ingrese su contraseña" />
+                        <small id="errorContraseña" class="invalid-feedback"></small>
+                    </div>
 
-                <div class="campo">
-                    <label for="contraseña">
-                        Contraseña
-                    </label>
-                    <input
-                        type="password"
-                        id="contraseña"
-                        placeholder="Ingrese su contraseña">
-                    <small
-                        id="errorContraseña"
-                        class="error">
-                    </small>
-                </div>
+                    <button type="submit" class="btn btn-gamego">Iniciar sesión</button>
 
-                <button type="submit">
-                    Iniciar sesión
-                </button>
-                    
-                <div id="mensajeFinal"></div>
-            </form>
+                    <div id="mensajeFinal" aria-live="polite"></div>
+                </form>
+            </div>
         </section>
-        <script src="src/js/validacionesLogIn.js"></script>
+    </main>
 
-        
-    <footer class="footer">
-        <p>@2026 GameGo</p>
+    <footer class="footer text-center py-4">
+        <p class="mb-0">@2026 GameGo</p>
     </footer>
+
+    <script type="module" src="src/js/validacionesLogIn.js"></script>
 </body>
-
-
 
 </html>

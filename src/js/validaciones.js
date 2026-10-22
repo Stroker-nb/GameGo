@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (sesionIniciada) {
             // Usuario logueado: Mostrar "Cerrar sesión"
-            contenedorAuth.innerHTML = '<button id="btn-logout" class="btn-header">Cerrar sesión</button>';
+            contenedorAuth.innerHTML = '<button id="btn-logout" class="btn btn-outline-light btn-sm">Cerrar sesión</button>';
             
             // Evento para cerrar sesión
             document.getElementById('btn-logout').addEventListener('click', () => {
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         } else {
             // Usuario visitante: Mostrar "Iniciar sesión"
-            contenedorAuth.innerHTML = '<button id="btn-login" class="btn-header">Iniciar sesión</button>';
+            contenedorAuth.innerHTML = '<button id="btn-login" class="btn btn-outline-light btn-sm">Iniciar sesión</button>';
             
             // Evento para ir al login
             document.getElementById('btn-login').addEventListener('click', () => {
@@ -73,9 +73,9 @@ formulario.addEventListener(
         mensajeFinal.className = "";
 
         // quitar marcas visuales
-        inputNombre.classList.remove("input-error");
-        inputCorreo.classList.remove("input-error");
-        inputComentario.classList.remove("input-error");
+        inputNombre.classList.remove("is-invalid");
+        inputCorreo.classList.remove("is-invalid");
+        inputComentario.classList.remove("is-invalid");
 
         let formularioValido = true;
 
@@ -83,13 +83,13 @@ formulario.addEventListener(
         if (nombre === "") {
             errorNombre.textContent =
                 "El nombre es obligatorio.";
-            inputNombre.classList.add("input-error");
+            inputNombre.classList.add("is-invalid");
             formularioValido = false;
         } else if (nombre.length > 100) {
             // REGLA 2 — Nombre máximo 100 caracteres
             errorNombre.textContent =
                 "El nombre no puede superar los 100 caracteres.";
-            inputNombre.classList.add("input-error");
+            inputNombre.classList.add("is-invalid");
             formularioValido = false;
         }
 
@@ -97,13 +97,13 @@ formulario.addEventListener(
         if (correo === "") {
             errorCorreo.textContent =
                 "El correo es obligatorio.";
-            inputCorreo.classList.add("input-error");
+            inputCorreo.classList.add("is-invalid");
             formularioValido = false;
         } else if (correo.length > 100) {
             // REGLA 4 — Correo máximo 100 caracteres
             errorCorreo.textContent =
                 "El correo no puede superar los 100 caracteres.";
-            inputCorreo.classList.add("input-error");
+            inputCorreo.classList.add("is-invalid");
             formularioValido = false;
         } else {
             // REGLA 5 — Dominios de correo permitidos
@@ -112,10 +112,10 @@ formulario.addEventListener(
              const dominioPermitido2 =
                 correo.endsWith("@hotmail.com");
 
-            if (!dominioPermitido1 , !dominioPermitido2) {
+            if (!dominioPermitido1 && !dominioPermitido2) {
                 errorCorreo.textContent =
                     "Utiliza un correo @hotmail.com o @gmail.com.";
-                inputCorreo.classList.add("input-error");
+                inputCorreo.classList.add("is-invalid");
                 formularioValido = false;
             }
         }
@@ -124,13 +124,13 @@ formulario.addEventListener(
         if (comentario === "") {
             errorComentario.textContent =
                 "El comentario es obligatorio.";
-            inputComentario.classList.add("input-error");
+            inputComentario.classList.add("is-invalid");
             formularioValido = false;
         } else if (comentario.length > 500) {
             // REGLA 7 — Comentario máximo 500 caracteres
             errorComentario.textContent =
                 "El comentario no puede superar los 500 caracteres.";
-            inputComentario.classList.add("input-error");
+            inputComentario.classList.add("is-invalid");
             formularioValido = false;
         }
 
@@ -138,12 +138,12 @@ formulario.addEventListener(
         if (formularioValido) {
             mensajeFinal.textContent =
                 "¡Mensaje enviado correctamente! Te contactaremos pronto.";
-            mensajeFinal.className = "exito";
+            mensajeFinal.className = "alert alert-success mt-3";
             formulario.reset();
         } else {
             mensajeFinal.textContent =
                 "Revisa los campos marcados en rojo antes de enviar.";
-            mensajeFinal.className = "error-general";
+            mensajeFinal.className = "alert alert-danger mt-3";
         }
 
         console.log("Formulario procesado. Válido: ", formularioValido);

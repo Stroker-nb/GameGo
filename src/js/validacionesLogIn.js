@@ -30,8 +30,8 @@ formulario.addEventListener(
         mensajeFinal.textContent = "";
         mensajeFinal.className = "";
 
-        inputContraseña.classList.remove("input-error");
-        inputCorreo.classList.remove("input-error");
+        inputContraseña.classList.remove("is-invalid");
+        inputCorreo.classList.remove("is-invalid");
 
         let formularioValido = true;
 
@@ -39,26 +39,26 @@ formulario.addEventListener(
         if (contraseña === "") {
             errorContraseña.textContent =
                 "La contraseña es obligatoria.";
-            inputContraseña.classList.add("input-error");
+            inputContraseña.classList.add("is-invalid");
             formularioValido = false;
         } else if (contraseña.length < 7) {
 
             errorContraseña.textContent =
                 "La contraseña debe tener al menos 7 caracteres.";
-            inputContraseña.classList.add("input-error");
+            inputContraseña.classList.add("is-invalid");
             formularioValido = false;
         }
 
         if (correo === "") {
             errorCorreo.textContent =
                 "El correo es obligatorio.";
-            inputCorreo.classList.add("input-error");
+            inputCorreo.classList.add("is-invalid");
             formularioValido = false;
         } else if (correo.length > 100) {
 
             errorCorreo.textContent =
                 "El correo no puede superar los 100 caracteres.";
-            inputCorreo.classList.add("input-error");
+            inputCorreo.classList.add("is-invalid");
             formularioValido = false;
         } else {
 
@@ -70,7 +70,7 @@ formulario.addEventListener(
             if (!dominioPermitido1 && !dominioPermitido2) {
                 errorCorreo.textContent =
                     "Utiliza un correo @hotmail.com o @gmail.com.";
-                inputCorreo.classList.add("input-error");
+                inputCorreo.classList.add("is-invalid");
                 formularioValido = false;
             }
         }
@@ -80,7 +80,7 @@ formulario.addEventListener(
         if (formularioValido) {
             mensajeFinal.textContent =
                 "¡Bienvenido!";
-            mensajeFinal.className = "exito";
+            mensajeFinal.className = "alert alert-success mt-3";
             formulario.reset();
             localStorage.setItem('sesionIniciada', 'true');
             setTimeout(() => {
@@ -89,7 +89,7 @@ formulario.addEventListener(
         } else {
             mensajeFinal.textContent =
                 "Revisa los campos marcados en rojo antes de enviar.";
-            mensajeFinal.className = "error-general";
+            mensajeFinal.className = "alert alert-danger mt-3";
         }
 
         console.log("Formulario procesado. Válido: ", formularioValido);

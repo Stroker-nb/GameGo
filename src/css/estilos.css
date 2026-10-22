@@ -1,179 +1,116 @@
+:root,
+[data-bs-theme="dark"] {
+    --gg-rojo: #c0392b;
+    --gg-rojo-oscuro: #8b1e1e;
+    --gg-rojo-hover: #a52a2a;
+    --gg-superficie: #1a1d29;
+    --gg-borde: #3d3737;
+
+    --bs-body-bg: #12141c;
+    --bs-body-color: #b5b8c4;
+    --bs-border-color: var(--gg-borde);
+    --bs-link-color-rgb: 255, 255, 255;
+    --bs-link-hover-color-rgb: 230, 150, 140;
+    --bs-danger: #ff6b6b;
+    --bs-danger-rgb: 255, 107, 107;
+}
+
 body {
-    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #12141c;
-    color: gray;
+}
+
+.cabecera {
+    background-color: var(--gg-rojo);
+    color: #fff;
+    padding: 25px 0;
+}
+
+.menu {
+    background-color: var(--gg-rojo-oscuro);
+}
+
+.menu .nav-link {
+    color: #fcfcfc;
+}
+
+.menu .nav-link:hover,
+.menu .nav-link:focus {
+    color: #fff;
+    text-decoration: underline;
 }
 
 .tituloSeccion {
     text-align: center;
     margin-bottom: 20px;
-    color: white;
+    color: #fff;
 }
 
-.linkTrailer{
-    color: white;
-
+.card {
+    --bs-card-bg: var(--gg-superficie);
+    --bs-card-border-color: var(--gg-borde);
 }
 
-.cabecera {
-    background-color: #c0392b ;
-    color: white;
-    padding: 25px;
-    text-align: center;
+.producto-img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
 }
 
-.menu {
-    background-color: #8b1e1e;
-    padding: 15px;
-    text-align: center;
-}
-
-.menu a {
-    color: #c0392b;
-    text-align: none;
-    margin: 15px;
-    color: #fcfcfc;
-    text-decoration: none;
-}
-
-.contenedor {
-    padding: 20px;
-}
-
-.icono {
-    font-size: 60px;
-}
-
-.producto {
-    background-color: #1a1d29;
-    border: 1px solid #3d3737;
-    padding: 20px;
-    margin-bottom: 20px;
-    width: 200px;
+.linkTrailer {
+    color: #fff;
 }
 
 .precio {
-    color: #5c0f0f ec;
-    font-size: 22px;
+    color: #fff;
+    font-size: 1.35rem;
     font-weight: bold;
 }
 
-.button {
-    background-color: #8b1e1e;
-    color: white;
-    border: none;
-    padding: 10px 20px;
+.btn-gamego {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--gg-rojo-oscuro);
+    --bs-btn-border-color: var(--gg-rojo-oscuro);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--gg-rojo-hover);
+    --bs-btn-hover-border-color: var(--gg-rojo-hover);
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--gg-rojo-hover);
+    --bs-btn-active-border-color: var(--gg-rojo-hover);
+    --bs-btn-focus-shadow-rgb: 192, 57, 43;
+}
+
+.form-control {
+    background-color: var(--bs-body-bg);
+    border-color: var(--gg-borde);
+    color: #fff;
+}
+
+.form-control:focus {
+    background-color: var(--bs-body-bg);
+    color: #fff;
+    border-color: var(--gg-rojo);
+    box-shadow: 0 0 0 0.25rem rgba(192, 57, 43, 0.25);
+}
+
+.form-label {
+    font-weight: bold;
+    color: #fff;
 }
 
 .footer {
     background-color: #1e2130;
-    color: white;
-    text-align: center;
-    padding: 20px;
+    color: #fff;
 }
 
-.productos {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.contacto-info {
-    color: #d3d3d3;
-}
-
-.formulario-contacto {
-    max-width: 600px;
-    margin: 30px 0;
-    background-color: #1a1d29;
-    border: 1px solid #3d3737;
-    padding: 30px;
-    border-radius: 6px;
-}
-
-.formulario-logIn {
-    max-width: 600px;
-    margin: 30px auto;
-    background-color: #1a1d29;
-    border: 1px solid #3d3737;
-    padding: 30px;
-    border-radius: 6px;
-}
-
-.campo {
-    margin-bottom: 20px;
-}
-
-.campo label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: white;
-}
-
-.campo input,
-.campo textarea {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    background-color: #12141c;
-    border: 1px solid #3d3737;
-    color: white;
-    border-radius: 3px;
-}
-
-.formulario-contacto button {
-    background-color: #8b1e1e;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    cursor: pointer;
-    border-radius: 3px;
-}
-
-.formulario-logIn button {
-    background-color: #8b1e1e;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    cursor: pointer;
-    border-radius: 3px;
+.offcanvas {
+    --bs-offcanvas-bg: var(--gg-superficie);
+    --bs-offcanvas-border-color: var(--gg-borde);
 }
 
 
-.formulario-contacto button:hover {
-    background-color: #a52a2a;
+.carrito-img {
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+    flex-shrink: 0;
 }
 
-.formulario-logIn button:hover {
-    background-color: #a52a2a;
-}
-
-.error {
-    display: block;
-    color: #ff6b6b;
-    margin-top: 5px;
-    font-size: 14px;
-}
-
-.input-error {
-    border: 2px solid #ff6b6b !important;
-}
-
-.exito {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #1e3a1e;
-    color: #7be07b;
-    border-radius: 3px;
-}
-
-.error-general {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #3a1e1e;
-    color: #ff8a8a;
-    border-radius: 3px;
-}
