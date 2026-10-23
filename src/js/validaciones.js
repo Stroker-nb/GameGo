@@ -1,3 +1,5 @@
+import { Toast } from "bootstrap";
+
 document.addEventListener('DOMContentLoaded', () => {
     const contenedorAuth = document.getElementById('contenedor-auth');
 
@@ -12,7 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
             // Evento para cerrar sesión
             document.getElementById('btn-logout').addEventListener('click', () => {
                 localStorage.removeItem('sesionIniciada'); // Borra la persistencia
-                actualizarBotonSesion(); // Vuelve a evaluar y cambia el botón al instante
+                actualizarBotonSesion(); //actualisa el boton
+                Toast.getOrCreateInstance(document.getElementById('toastSesion'), { delay: 2500 }).show(); 
+
             });
         } else {
             // Usuario visitante: Mostrar "Iniciar sesión"

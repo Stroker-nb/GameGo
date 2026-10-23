@@ -4,7 +4,7 @@ module.exports = function (config) {
         frameworks: ["jasmine"],
         files: [
             { pattern: "src/js/validacionesCore.js", included: true, watched: true },
-            { pattern: "tests/**/*.spec.js", included: true, watched: true }
+            { pattern: "test/**/*.spec.js", included: true, watched: true }
         ],
         reporters: ["progress"],
         browsers: ['FirefoxHeadless'],
