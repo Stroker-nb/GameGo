@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.2",
     "jasmine-core": "^5.1.2",
     "karma": "^6.4.4",
     "karma-chrome-launcher": "^3.2.0",
@@ -17,6 +18,9 @@
     "vite": "^8.3.5"
   },
   "dependencies": {
-    "bootstrap": "^5.3.8"
+    "bootstrap": "^5.3.8",
+    "react": "^19.3.1",
+    "react-bootstrap": "^2.10.10",
+    "react-dom": "^19.3.1"
   }
 }
